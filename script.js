@@ -24,20 +24,32 @@
 // console.log(appleJuice);
 // console.log(fruitProccesor(5, 8));
 
-// ==>Function Declaration-------------------------------------------------------------------------------------------------------------------------------
+// // ==>Function Declaration-------------------------------------------------------------------------------------------------------------------------------
 
-function calcAge1(birthYear) {
-  return 2023 - birthYear;
-}
+// function calcAge1(birthYear) {
+//   return 2023 - birthYear;
+// }
 
-const calcAge = calcAge1(2000);
-console.log(calcAge);
+// const calcAge = calcAge1(2000);
+// console.log(calcAge);
 
-// ==>Annonymous / Expression Function-------------------------------------------------------------------------------------------------------------------
+// // ==>Annonymous / Expression Function-------------------------------------------------------------------------------------------------------------------
 
-const myAge = function (birthYear) {
-  return 2023 - birthYear;
+// const myAge = function (birthYear) {
+//   return 2023 - birthYear;
+// };
+
+// const calcAge2 = myAge(2000);
+// console.log(calcAge2);
+
+//==> Arrow Function---------------------------------------------------------------------------------------------------------------------------------------
+const calcAge3 = (birthYear) => 2023 - birthYear;
+const age3 = calcAge3(2000);
+console.log(age3);
+
+const yearsUntillRetirement = (age3, firstName) => {
+  const retirement = 65 - age3;
+  return `${firstName} you are retiring in ${retirement} years`;
 };
 
-const calcAge2 = myAge(2000);
-console.log(calcAge2);
+console.log(yearsUntillRetirement(age3, "Harshana"));
