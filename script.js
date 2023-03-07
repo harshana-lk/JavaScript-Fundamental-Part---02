@@ -42,14 +42,28 @@
 // const calcAge2 = myAge(2000);
 // console.log(calcAge2);
 
-//==> Arrow Function---------------------------------------------------------------------------------------------------------------------------------------
-const calcAge3 = (birthYear) => 2023 - birthYear;
-const age3 = calcAge3(2000);
-console.log(age3);
+// //==> Arrow Function---------------------------------------------------------------------------------------------------------------------------------------
+// const calcAge3 = (birthYear) => 2023 - birthYear;
+// const age3 = calcAge3(2000);
+// console.log(age3);
 
-const yearsUntillRetirement = (age3, firstName) => {
-  const retirement = 65 - age3;
-  return `${firstName} you are retiring in ${retirement} years`;
-};
+// const yearsUntillRetirement = (age3, firstName) => {
+//   const retirement = 65 - age3;
+//   return `${firstName} you are retiring in ${retirement} years`;
+// };
 
-console.log(yearsUntillRetirement(age3, "Harshana"));
+// console.log(yearsUntillRetirement(age3, "Harshana"));
+
+// ==>Nested Functions--------------------------------------------------------------------------------------------------------------------------------------
+function cutFruits(fruits) {
+  return fruits * 4;
+}
+
+function fruitProccesor(apple, orange) {
+  const appleFruit = cutFruits(apple);
+  const orangeFruit = cutFruits(orange);
+  const juice = `Juice with ${appleFruit} Aplles and ${orangeFruit} Oranges .`;
+  return juice;
+}
+
+console.log(fruitProccesor(5, 2));
