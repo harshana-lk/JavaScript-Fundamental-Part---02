@@ -54,16 +54,31 @@
 
 // console.log(yearsUntillRetirement(age3, "Harshana"));
 
-// ==>Nested Functions--------------------------------------------------------------------------------------------------------------------------------------
-function cutFruits(fruits) {
-  return fruits * 4;
-}
+// // ==>Nested Functions--------------------------------------------------------------------------------------------------------------------------------------
+// function cutFruits(fruits) {
+//   return fruits * 4;
+// }
 
-function fruitProccesor(apple, orange) {
-  const appleFruit = cutFruits(apple);
-  const orangeFruit = cutFruits(orange);
-  const juice = `Juice with ${appleFruit} Aplles and ${orangeFruit} Oranges .`;
-  return juice;
-}
+// function fruitProccesor(apple, orange) {
+//   const appleFruit = cutFruits(apple);
+//   const orangeFruit = cutFruits(orange);
+//   const juice = `Juice with ${appleFruit} Aplles and ${orangeFruit} Oranges .`;
+//   return juice;
+// }
 
-console.log(fruitProccesor(5, 2));
+// console.log(fruitProccesor(5, 2));
+
+const calcAge = function (birthYear) {
+  return 1950 - birthYear;
+};
+
+const yearsUntillRetirement = (birthYear, firstName) => {
+  const retirement = calcAge(birthYear);
+  if (retirement > 0) {
+    return `${firstName} you are retiring in ${retirement} years`;
+  } else {
+    return `${firstName} you are already retired`;
+  }
+};
+
+console.log(yearsUntillRetirement(2000, "Harshana"));
