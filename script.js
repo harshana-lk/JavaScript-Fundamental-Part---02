@@ -150,3 +150,29 @@ const harshana = {
 };
 
 console.log(harshana);
+console.log(harshana.firstName);
+console.log(harshana["lastName"]);
+
+const nameKey = "Name";
+console.log(harshana["first" + nameKey]);
+console.log(harshana["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to konw about harshana?Choose between firstName,lastName,age,job,friends"
+);
+
+if (harshana[interestedIn]) {
+  console.log(harshana[interestedIn]);
+} else {
+  console.log(
+    "Wrong request! Choose between firstName,lastName,age,job,friends"
+  );
+}
+
+harshana.location = "Sri Lanka";
+harshana["Twitter"] = "@harshana___lk";
+console.log(harshana);
+
+console.log(
+  `${harshana.firstName} has ${harshana.friends.length} friends and ${harshana.friends[0]} is the best friend`
+);
