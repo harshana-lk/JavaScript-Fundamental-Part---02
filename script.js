@@ -119,24 +119,34 @@
 // ];
 // console.log(age);
 
-const friends = ["Nermo", "Garfield", "Olivia"];
+// const friends = ["Nermo", "Garfield", "Olivia"];
 
-// Add elements
-friends.push("Harshana"); // addling element to end of the array
-console.log(friends);
-friends.unshift("Sewwandi"); // adding element to begining of the array
-console.log(friends);
+// // Add elements
+// friends.push("Harshana"); // addling element to end of the array
+// console.log(friends);
+// friends.unshift("Sewwandi"); // adding element to begining of the array
+// console.log(friends);
 
-// Remove elements
-friends.pop(); // removing the element that located in last of the array
-console.log(friends);
-friends.shift(); // removing the element that locatedm in the beginig of the array
-console.log(friends);
+// // Remove elements
+// friends.pop(); // removing the element that located in last of the array
+// console.log(friends);
+// friends.shift(); // removing the element that locatedm in the beginig of the array
+// console.log(friends);
 
-console.log(friends.indexOf("Nermo")); //returning the index of the element
+// console.log(friends.indexOf("Nermo")); //returning the index of the element
 
-console.log(friends.includes("Nermo"));
+// console.log(friends.includes("Nermo"));
 
-if (friends.includes("Nermo")) {
-  console.log("You have a friend called Nermo");
-}
+// if (friends.includes("Nermo")) {
+//   console.log("You have a friend called Nermo");
+// }
+
+const harshana = {
+  firstName: "Harshana",
+  lastName: "Jayaweera",
+  age: 22,
+  job: "Student",
+  friends: ["Nethsara", "Thamindu", "Sewwandi"],
+};
+
+console.log(harshana);
