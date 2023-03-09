@@ -83,38 +83,60 @@
 
 // console.log(yearsUntillRetirement(2000, "Harshana"));
 
-const friend1 = "Nermo";
-const friend2 = "Garfield"; //==> Without Arrays
-const friend3 = "Olivia";
+// const friend1 = "Nermo";
+// const friend2 = "Garfield"; //==> Without Arrays
+// const friend3 = "Olivia";
 
-const friends = ["Nermo", "Garfield", "Olivia"]; //==> With Arrays(Method 1)
+// const friends = ["Nermo", "Garfield", "Olivia"]; //==> With Arrays(Method 1)
+// console.log(friends);
+// const newFriends = new Array("Harshana", "Hansi"); //==> With Arrays(Method 2)
+// console.log(newFriends);
+
+// console.log(friends[0]); // To print an specific index in an Array
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = "Harshana";
+// console.log(friends); // can change specified index value in an Array
+
+// const firstName = "Harshana";
+// const harshana = [firstName, "Jayaweera", 2023 - 2000, "Student", friends];
+// console.log(harshana);
+// console.log(harshana.length);
+
+// const calcAge = function (birthYear) {
+//   return 2023 - birthYear;
+// };
+
+// const year = [2000, 2001, 2002];
+// console.log(calcAge(year)); // this cant be happen , this is wrong
+
+// console.log(calcAge(year[0]));
+// console.log(calcAge(year[1]));
+// console.log(calcAge(year[year.length - 1]));
+
+// const age = [
+//   calcAge(year[0], calcAge(year[1], calcAge(year[year.length - 1]))), // Arrays can assign methods (Expression - When they produces a value)
+// ];
+// console.log(age);
+
+const friends = ["Nermo", "Garfield", "Olivia"];
+
+// Add elements
+friends.push("Harshana"); // addling element to end of the array
 console.log(friends);
-const newFriends = new Array("Harshana", "Hansi"); //==> With Arrays(Method 2)
-console.log(newFriends);
+friends.unshift("Sewwandi"); // adding element to begining of the array
+console.log(friends);
 
-console.log(friends[0]); // To print an specific index in an Array
-console.log(friends[friends.length - 1]);
+// Remove elements
+friends.pop(); // removing the element that located in last of the array
+console.log(friends);
+friends.shift(); // removing the element that locatedm in the beginig of the array
+console.log(friends);
 
-friends[2] = "Harshana";
-console.log(friends); // can change specified index value in an Array
+console.log(friends.indexOf("Nermo")); //returning the index of the element
 
-const firstName = "Harshana";
-const harshana = [firstName, "Jayaweera", 2023 - 2000, "Student", friends];
-console.log(harshana);
-console.log(harshana.length);
+console.log(friends.includes("Nermo"));
 
-const calcAge = function (birthYear) {
-  return 2023 - birthYear;
-};
-
-const year = [2000, 2001, 2002];
-console.log(calcAge(year)); // this cant be happen , this is wrong
-
-console.log(calcAge(year[0]));
-console.log(calcAge(year[1]));
-console.log(calcAge(year[year.length - 1]));
-
-const age = [
-  calcAge(year[0], calcAge(year[1], calcAge(year[year.length - 1]))), // Arrays can assign methods (Expression - When they produces a value)
-];
-console.log(age);
+if (friends.includes("Nermo")) {
+  console.log("You have a friend called Nermo");
+}
