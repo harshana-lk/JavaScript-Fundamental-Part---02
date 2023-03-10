@@ -141,38 +141,65 @@
 //   console.log("You have a friend called Nermo");
 // }
 
+// const harshana = {
+//   firstName: "Harshana",
+//   lastName: "Jayaweera",
+//   age: 22,
+//   job: "Student",
+//   friends: ["Nethsara", "Thamindu", "Sewwandi"],
+// };
+
+// console.log(harshana);
+// console.log(harshana.firstName);
+// console.log(harshana["lastName"]);
+
+// const nameKey = "Name";
+// console.log(harshana["first" + nameKey]);
+// console.log(harshana["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "What do you want to konw about harshana?Choose between firstName,lastName,age,job,friends"
+// );
+
+// if (harshana[interestedIn]) {
+//   console.log(harshana[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request! Choose between firstName,lastName,age,job,friends"
+//   );
+// }
+
+// harshana.location = "Sri Lanka";
+// harshana["Twitter"] = "@harshana___lk";
+// console.log(harshana);
+
+// console.log(
+//   `${harshana.firstName} has ${harshana.friends.length} friends and ${harshana.friends[0]} is the best friend`
+// );
+
 const harshana = {
   firstName: "Harshana",
   lastName: "Jayaweera",
-  age: 22,
+  year: 2000,
   job: "Student",
   friends: ["Nethsara", "Thamindu", "Sewwandi"],
+  hasDriversLicence: true,
+
+  calcAge: function () {
+    this.age = 2023 - this.year;
+    return this.age;
+  },
+
+  about: function () {
+    console.log(
+      `${
+        this.firstName
+      } is a ${this.calcAge()} years old student , and he has ${
+        harshana.hasDriversLicence ? "Drivers Licenece" : "not drivers Licence"
+      }`
+    );
+  },
 };
 
-console.log(harshana);
-console.log(harshana.firstName);
-console.log(harshana["lastName"]);
-
-const nameKey = "Name";
-console.log(harshana["first" + nameKey]);
-console.log(harshana["last" + nameKey]);
-
-const interestedIn = prompt(
-  "What do you want to konw about harshana?Choose between firstName,lastName,age,job,friends"
-);
-
-if (harshana[interestedIn]) {
-  console.log(harshana[interestedIn]);
-} else {
-  console.log(
-    "Wrong request! Choose between firstName,lastName,age,job,friends"
-  );
-}
-
-harshana.location = "Sri Lanka";
-harshana["Twitter"] = "@harshana___lk";
-console.log(harshana);
-
-console.log(
-  `${harshana.firstName} has ${harshana.friends.length} friends and ${harshana.friends[0]} is the best friend`
-);
+console.log(harshana.calcAge());
+console.log(harshana.about());
