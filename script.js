@@ -204,36 +204,40 @@
 // console.log(harshana.calcAge());
 // console.log(harshana.about());
 
-const mark = {
-  name: "mark",
-  height: 1.8,
-  mass: 72,
+// const mark = {
+//   name: "mark",
+//   height: 1.8,
+//   mass: 72,
 
-  marksBMI: function () {
-    return this.mass / this.height ** 2;
-  },
-};
+//   marksBMI: function () {
+//     return this.mass / this.height ** 2;
+//   },
+// };
 
-const john = {
-  name: "john",
-  height: 1.5,
-  mass: 65,
+// const john = {
+//   name: "john",
+//   height: 1.5,
+//   mass: 65,
 
-  johnsBMI: function () {
-    return this.mass / this.height ** 2;
-  },
-};
+//   johnsBMI: function () {
+//     return this.mass / this.height ** 2;
+//   },
+// };
 
-if (mark.marksBMI() > john.johnsBMI()) {
-  console.log(
-    `${mark.name}'s BMI (${mark.marksBMI()}) is higher than ${
-      john.name
-    }'s BMI (${john.johnsBMI()})`
-  );
-} else {
-  console.log(
-    `${john.name}'s BMI (${john.johnsBMI()}) is higher than ${
-      mark.name
-    }'s BMI (${mark.marksBMI()})`
-  );
+// if (mark.marksBMI() > john.johnsBMI()) {
+//   console.log(
+//     `${mark.name}'s BMI (${mark.marksBMI()}) is higher than ${
+//       john.name
+//     }'s BMI (${john.johnsBMI()})`
+//   );
+// } else {
+//   console.log(
+//     `${john.name}'s BMI (${john.johnsBMI()}) is higher than ${
+//       mark.name
+//     }'s BMI (${mark.marksBMI()})`
+//   );
+// }
+
+for (let rep = 0; rep <= 10; rep++) {
+  console.log(`Harshana kariya ${rep} 👍`);
 }
