@@ -289,12 +289,42 @@
 //   }
 // }
 
-let dice = Math.trunc(Math.random() * 6 + 1);
+// let dice = Math.trunc(Math.random() * 6 + 1);
 
-while (dice !== 6) {
-  console.log(`You have rolled dice at ${dice}`);
-  dice++;
-  if (dice == 6) {
-    console.log(`The loop is about to end....`);
-  }
+// while (dice !== 6) {
+//   console.log(`You have rolled dice at ${dice}`);
+//   dice++;
+//   if (dice == 6) {
+//     console.log(`The loop is about to end....`);
+//   }
+// }
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [100, 25, 1150, 550, 45, 781, 123, 45, 4456, 15, 8];
+const tips = [];
+const total = [];
+
+for (let index = 0; index < bills.length; index++) {
+  const tip = calcTip(bills[index]);
+  tips.push(tip);
+  total.push(tip + bills[index]);
 }
+
+for (let index = 0; index < bills.length; index++) {
+  console.log(bills[index], tips[index], total[index]);
+}
+
+const clacAverage = function (arr) {
+  let sum = 0;
+  for (let index = 0; index < arr.length; index++) {
+    sum += arr[index];
+  }
+  return sum / arr.length;
+};
+
+console.log(Math.trunc(clacAverage([50, 25, 100])));
+console.log(Math.trunc(clacAverage(total)));
+console.log(Math.trunc(clacAverage(tips)));
