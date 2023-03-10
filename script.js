@@ -238,6 +238,40 @@
 //   );
 // }
 
-for (let rep = 0; rep <= 10; rep++) {
-  console.log(`Harshana kariya ${rep} 👍`);
+// for (let rep = 0; rep <= 10; rep++) {
+//   console.log(`Harshana kariya ${rep} 👍`);
+// }
+
+const harshana = [
+  "Harshana",
+  "Jayaweera",
+  22,
+  "Student",
+  ["Nethsara", "Thamindu", "Sewwandi"],
+];
+
+const type = [];
+
+for (let index = 0; index < harshana.length; index++) {
+  console.log(harshana[index]);
+  type.push(typeof harshana[index]);
+}
+
+console.log(type);
+
+const years = [2000, 2001, 2002, 2003, 2004];
+const ages = [];
+
+for (let index = 0; index < years.length; index++) {
+  ages.push(2023 - years[index]);
+}
+
+console.log(ages);
+
+console.log("---------ONLY STRINGS-----------");
+for (let index = 0; index < harshana.length; index++) {
+  if (typeof harshana[index] !== "string") {
+    continue;
+  }
+  console.log(harshana[index], typeof harshana[index]);
 }
