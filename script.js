@@ -270,21 +270,31 @@
 //     console.log(harshana[index], typeof harshana[index]);
 // }
 
-const harshana = [
-  "Harshana",
-  "Jayaweera",
-  22,
-  "Student",
-  ["Nethsara", "Thamindu", "Sewwandi"],
-];
+// const harshana = [
+//   "Harshana",
+//   "Jayaweera",
+//   22,
+//   "Student",
+//   ["Nethsara", "Thamindu", "Sewwandi"],
+// ];
 
-for (let i = harshana.length - 1; i >= 0; i--) {
-  console.log(harshana[i]);
-}
+// for (let i = harshana.length - 1; i >= 0; i--) {
+//   console.log(harshana[i]);
+// }
 
-for (let i = 0; i <= 4; i++) {
-  console.log("-----Staring----- " + i);
-  for (let j = 0; j <= 5; j++) {
-    console.log(`Nested Loops In JavaScript ` + j);
+// for (let i = 0; i <= 4; i++) {
+//   console.log("-----Staring----- " + i);
+//   for (let j = 0; j <= 5; j++) {
+//     console.log(`Nested Loops In JavaScript ` + j);
+//   }
+// }
+
+let dice = Math.trunc(Math.random() * 6 + 1);
+
+while (dice !== 6) {
+  console.log(`You have rolled dice at ${dice}`);
+  dice++;
+  if (dice == 6) {
+    console.log(`The loop is about to end....`);
   }
 }
