@@ -177,29 +177,63 @@
 //   `${harshana.firstName} has ${harshana.friends.length} friends and ${harshana.friends[0]} is the best friend`
 // );
 
-const harshana = {
-  firstName: "Harshana",
-  lastName: "Jayaweera",
-  year: 2000,
-  job: "Student",
-  friends: ["Nethsara", "Thamindu", "Sewwandi"],
-  hasDriversLicence: true,
+// const harshana = {
+//   firstName: "Harshana",
+//   lastName: "Jayaweera",
+//   year: 2000,
+//   job: "Student",
+//   friends: ["Nethsara", "Thamindu", "Sewwandi"],
+//   hasDriversLicence: true,
 
-  calcAge: function () {
-    this.age = 2023 - this.year;
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2023 - this.year;
+//     return this.age;
+//   },
 
-  about: function () {
-    console.log(
-      `${
-        this.firstName
-      } is a ${this.calcAge()} years old student , and he has ${
-        harshana.hasDriversLicence ? "Drivers Licenece" : "not drivers Licence"
-      }`
-    );
+//   about: function () {
+//     console.log(
+//       `${
+//         this.firstName
+//       } is a ${this.calcAge()} years old student , and he has ${
+//         harshana.hasDriversLicence ? "Drivers Licenece" : "not drivers Licence"
+//       }`
+//     );
+//   },
+// };
+
+// console.log(harshana.calcAge());
+// console.log(harshana.about());
+
+const mark = {
+  name: "mark",
+  height: 1.8,
+  mass: 72,
+
+  marksBMI: function () {
+    return this.mass / this.height ** 2;
   },
 };
 
-console.log(harshana.calcAge());
-console.log(harshana.about());
+const john = {
+  name: "john",
+  height: 1.5,
+  mass: 65,
+
+  johnsBMI: function () {
+    return this.mass / this.height ** 2;
+  },
+};
+
+if (mark.marksBMI() > john.johnsBMI()) {
+  console.log(
+    `${mark.name}'s BMI (${mark.marksBMI()}) is higher than ${
+      john.name
+    }'s BMI (${john.johnsBMI()})`
+  );
+} else {
+  console.log(
+    `${john.name}'s BMI (${john.johnsBMI()}) is higher than ${
+      mark.name
+    }'s BMI (${mark.marksBMI()})`
+  );
+}
